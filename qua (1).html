@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffd8e8">
+<title>Món quà nhỏ dành cho Phương Anh 💗</title>
+<style>
+:root{--pink:#ff78ad;--rose:#d94d88;--light:#fff4f8;--ink:#714258;--cream:#fffaf2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:linear-gradient(145deg,#ffe4ef 0%,#fff8f2 48%,#f8e8ff 100%);overflow-x:hidden}
+button{font:inherit}
+.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.float{position:absolute;bottom:-45px;opacity:.7;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.wrap{position:relative;z-index:1;width:min(760px,calc(100% - 28px));margin:26px auto 40px}
+.panel{position:relative;text-align:center;padding:clamp(23px,6vw,52px);border:1px solid #fff; border-radius:30px;background:#ffffffc9;box-shadow:0 22px 70px #b95d8720;backdrop-filter:blur(12px);overflow:hidden}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;background:#ffe4ef;color:var(--rose);font-size:.78rem;font-weight:800;letter-spacing:.08em}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2.7rem,9vw,5.4rem);line-height:.98;letter-spacing:-.045em;color:var(--rose);margin:22px 0 15px}
+h1 span{display:block;color:#f38ab3;font-style:italic;font-size:.78em;margin-top:8px}
+.lead{max-width:500px;margin:0 auto;line-height:1.85;font-size:1.02rem}
+.hero-art{position:relative;width:190px;height:170px;margin:17px auto 8px;display:grid;place-items:center}
+.gift{font-size:100px;filter:drop-shadow(0 12px 10px #d95b8c30);cursor:pointer;user-select:none;transition:transform .35s;animation:bob 2.3s ease-in-out infinite}
+.gift:hover{transform:rotate(-6deg) scale(1.06)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.spark{position:absolute;font-size:24px;animation:twinkle 1.8s ease-in-out infinite}
+.s1{top:8px;left:10px}.s2{right:7px;top:27px;animation-delay:.5s}.s3{bottom:10px;left:28px;animation-delay:.9s}
+@keyframes twinkle{50%{transform:scale(1.3) rotate(15deg);opacity:.6}}
+.btnrow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:25px}
+.btn{border:0;border-radius:999px;padding:13px 21px;font-weight:750;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(135deg,#ff8cba,#df4e8c);color:#fff;box-shadow:0 9px 22px #d94d8835}
+.secondary{background:#fff0f6;color:var(--rose);border:1px solid #ffd2e3}
+.hint{font-size:.84rem;color:#aa7a90;margin-top:14px}
+.section{margin-top:18px;padding:25px;border-radius:24px;background:#fffafc;border:1px solid #ffe1ec;text-align:left;display:none;animation:appear .6s ease both}
+.section.show{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.section h2{text-align:center;font-family:Georgia,serif;font-size:1.75rem;font-weight:500;color:var(--rose);margin:0 0 16px}
+.letter{line-height:1.95;font-size:1rem}
+.letter p{margin:0 0 13px}
+.sign{text-align:right;font-family:Georgia,serif;font-style:italic;color:var(--rose);font-size:1.15rem;margin-top:20px}
+.seal{display:inline-block;background:#ffe4ef;border-radius:50%;padding:12px;font-size:25px}
+.music-note{font-size:.82rem;color:#9e7187;margin-top:13px}
+footer{text-align:center;padding:18px 8px 0;font-size:.82rem;color:#a77b90}
+.confetti{position:fixed;z-index:5;pointer-events:none;font-size:22px;animation:burst 1.8s ease-out forwards}
+@keyframes burst{0%{transform:translate(0,0) scale(.5) rotate(0);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.2) rotate(300deg);opacity:0}}
+.heartline{color:#f28bb4;letter-spacing:.45em;margin:18px 0 0}
+@media(max-width:480px){.wrap{margin:14px auto 26px}.panel{border-radius:24px}.hero-art{height:145px}.gift{font-size:86px}.section{padding:20px}.btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+<main class="wrap">
+  <section class="panel">
+    <div class="pill">🌷 20 THÁNG 10 · GỬI NGƯỜI ĐẶC BIỆT</div>
+    <div class="hero-art" aria-label="Hộp quà màu hồng">
+      <span class="spark s1">✨</span><span class="spark s2">💗</span><span class="spark s3">🌸</span>
+      <div class="gift" id="gift" role="img" aria-label="Hộp quà" title="Bấm để mở quà">🎁</div>
+    </div>
+    <h1>Phương Anh<span>ơi, có quà nè!</span></h1>
+    <p class="lead">Anh có một món quà nhỏ xíu chuẩn bị dành riêng cho em. Em có tò mò bên trong là gì không nhỉ? haha</p>
+    <div class="btnrow">
+      <button class="btn primary" id="openGift">Mở quà thôi 🎀</button>
+      <button class="btn secondary" id="musicBtn">♫ Bật nhạc nhẹ</button>
+    </div>
+    <p class="hint">Mách nhỏ: em bật nhạc rồi nhấn mở quà nha ✨</p>
+    <p class="music-note" id="musicStatus">🎵 </p>
+    <div class="heartline">♡ ♡ ♡</div>
+  </section>
+
+  <section class="section" id="giftReveal">
+    <h2>Ta-daaa! Một chút ngọt ngào cho cậu 🎉</h2>
+    <div style="text-align:center;font-size:3rem;margin:5px 0 15px">🧸💐🍓</div>
+    <p style="text-align:center;line-height:1.8">Món quà này không to đâu, nhưng anh có gửi kèm một lời chúc thật lòng và một chiếc thư bí mật nữa đó.</p>
+    <div style="text-align:center"><button class="btn primary" id="openLetter">Đọc thư bí mật 💌</button></div>
+  </section>
+
+  <section class="section" id="secretLetter">
+    <h2><span class="seal">💌</span><br>Thư bí mật anh gửi Phương Anh</h2>
+    <div class="letter">
+      <p>Phương Anh à,</p>
+      <p>Nhân ngày 20/10, anh chúc em lúc nào cũng vui vẻ, xinh xắn, tự tin và gặp thật nhiều điều dễ thương. Mong những ngày em thấy mệt sẽ có một điều nhỏ bé làm em mỉm cười; những lúc không vui sẽ luôn có người lắng nghe và ở bên em.</p>
+      <p>Anh không biết món quà nhỏ này có làm em bất ngờ không, nhưng anh đã muốn dành cho em một điều gì đó thật đáng yêu trong ngày đặc biệt này. Mong em luôn được trân trọng, được yêu thương và vẫn giữ nguyên nét đáng yêu rất riêng của mình. 🌷</p>
+      <p>Và… nếu hôm nay em cười một chút khi đọc đến đây thì món quà này coi như thành công rồi đó. 🤭💗</p>
+      <p><strong>Chúc em có một ngày 20/10 vui vẻ, hạnh phúc bên gia đình và người yêu nhá!Chúc em tất cả những điều tốt đẹp nhất! </strong></p>
+      <div class="sign"></div>
+    </div>
+  </section>
+  <footer></footer>
+</main>
+<script>
+const sky=document.getElementById('sky');
+const symbols=['💗','🌸','✨','🌷','♡','💕'];
+for(let i=0;i<26;i++){
+  const e=document.createElement('span');e.className='float';
+  e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  e.style.left=Math.random()*100+'%';e.style.animationDuration=(10+Math.random()*12)+'s';
+  e.style.animationDelay=(-Math.random()*20)+'s';e.style.fontSize=(13+Math.random()*17)+'px';sky.appendChild(e);
+}
+function burst(){
+  const items=['💗','🌸','✨','🎀','💕','🌷'];
+  for(let i=0;i<28;i++){
+    const e=document.createElement('span');e.className='confetti';
+    e.textContent=items[Math.floor(Math.random()*items.length)];
+    e.style.left=(38+Math.random()*24)+'vw';e.style.top=(35+Math.random()*20)+'vh';
+    e.style.setProperty('--x',((Math.random()-.5)*window.innerWidth*.9)+'px');
+    e.style.setProperty('--y',((-Math.random())*window.innerHeight*.7)+'px');
+    document.body.appendChild(e);setTimeout(()=>e.remove(),1900);
+  }
+}
+let opened=false;
+function openGift(){
+  document.getElementById('giftReveal').classList.add('show');
+  document.getElementById('gift').textContent='🧸';
+  document.getElementById('openGift').textContent='Quà đã mở rồi nè 💝';
+  burst();
+  document.getElementById('giftReveal').scrollIntoView({behavior:'smooth',block:'center'});
+  opened=true;
+}
+document.getElementById('openGift').addEventListener('click',openGift);
+document.getElementById('gift').addEventListener('click',openGift);
+document.getElementById('openLetter').addEventListener('click',()=>{
+  document.getElementById('secretLetter').classList.add('show');burst();
+  document.getElementById('secretLetter').scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+/* Nhạc nền dịu nhẹ được tổng hợp bằng Web Audio API, không cần file nhạc ngoài.
+   Trình duyệt chỉ phát sau khi người dùng bấm nút. */
+let audioCtx=null, master=null, musicTimer=null, musicOn=false, noteIndex=0;
+const melody=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,659.25,783.99,1046.5,880,783.99,659.25,587.33];
+function playNote(freq,when,duration){
+  const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
+  osc.type='sine';osc.frequency.setValueAtTime(freq,when);
+  gain.gain.setValueAtTime(0.0001,when);
+  gain.gain.exponentialRampToValueAtTime(0.075,when+.035);
+  gain.gain.exponentialRampToValueAtTime(0.0001,when+duration);
+  osc.connect(gain);gain.connect(master);osc.start(when);osc.stop(when+duration+.03);
+}
+function scheduleMelody(){
+  if(!musicOn)return;
+  const now=audioCtx.currentTime;
+  for(let j=0;j<4;j++){
+    const idx=(noteIndex+j)%melody.length;
+    playNote(melody[idx],now+j*.34,.29);
+    if(j%2===0)playNote(melody[idx]/2,now+j*.34,.48);
+  }
+  noteIndex=(noteIndex+4)%melody.length;
+  musicTimer=setTimeout(scheduleMelody,1360);
+}
+async function toggleMusic(){
+  const btn=document.getElementById('musicBtn'),status=document.getElementById('musicStatus');
+  if(!musicOn){
+    try{
+      const AC=window.AudioContext||window.webkitAudioContext;
+      if(!AC){status.textContent='Trình duyệt này chưa hỗ trợ nhạc nền.';return;}
+      audioCtx=audioCtx||new AC();if(audioCtx.state==='suspended')await audioCtx.resume();
+      master=master||audioCtx.createGain();master.gain.value=.5;master.connect(audioCtx.destination);
+      musicOn=true;scheduleMelody();btn.textContent='♫ Tắt nhạc';status.textContent='🎶 Nhạc đang phát — chúc em nghe vui nha!';
+    }catch(e){status.textContent='Chưa bật được nhạc. Hãy thử nhấn lại nhé.';}
+  }else{
+    musicOn=false;clearTimeout(musicTimer);if(master)master.gain.setTargetAtTime(.0001,audioCtx.currentTime,.05);
+    btn.textContent='♫ Bật nhạc nhẹ';status.textContent='🎵 Nhạc đã tạm dừng.';
+    setTimeout(()=>{if(!musicOn&&master)master.gain.setValueAtTime(.5,audioCtx.currentTime)},200);
+  }
+}
+document.getElementById('musicBtn').addEventListener('click',toggleMusic);
+</script>
+</body>
+</html>
